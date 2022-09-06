@@ -12,6 +12,4 @@ def roman_to_int(roman_string):
                 answer -= roman_numerals[roman_string[numeral]]
             give_or_take = roman_numerals[roman_string[numeral]]
         return answer
-
-    else:
-        return 0
+    return 0
