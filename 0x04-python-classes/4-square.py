@@ -41,7 +41,8 @@ class Square:
         """Prints a square using # symbol to stdout
         """
         for i in range(0, self.__size):
-            print()
+            if i > 0:
+                print()
             for j in range(0, self.__size):
                 print("#", end="")
         print()
