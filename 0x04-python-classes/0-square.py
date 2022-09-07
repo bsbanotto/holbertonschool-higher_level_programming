@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""This module creates a square with no safety net
+"""
+
+
 class Square:
     """This class defines a square based on size
     Size is the length of any one side
