@@ -5,7 +5,6 @@ class Square:
     Size will be a private attribute
     """
     def __init__(self, size="0"):
-        """This function controls the size of the
-        square
+        """This method initializes the square
         """
         self.__size = size
