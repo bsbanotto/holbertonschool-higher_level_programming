@@ -1,0 +1,36 @@
+Importing add_integer function to doctest    
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Testing when a is not an integer
+    >>> add_integer("hello", 98)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Testing when b is not an integer
+    >>> add_integer(35, "World")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Testing a is an integer, b is not passed
+    >>> add_integer(2)
+    100
+
+Testing a and b are negative
+    >>> add_integer(-35, -40)
+    -75
+
+Testing if a float is passed to a
+    >>> add_integer(5.4, 10)
+    15
+
+Testing very long float passed to b
+    >>> add_integer(10, 0.98869039757839208585782092847592)
+    10
+
+Testing boolean value passed to a
+    >>> add_integer(True, 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
