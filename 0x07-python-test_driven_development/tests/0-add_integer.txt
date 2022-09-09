@@ -41,6 +41,8 @@ Testing for no values passed
         ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
-Adding one more test to see if 9 are required
-    >>> add_integer(1, 1)
-    2
+Testing if string is typecasted as an integer
+    >>> add_integer(1, int("World"))
+    Traceback (most recent call last):
+        ...
+    ValueError: invalid literal for int() with base 10: 'World'
