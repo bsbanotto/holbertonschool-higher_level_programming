@@ -34,3 +34,9 @@ Testing boolean value passed to a
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
+Testing for no values passed
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
