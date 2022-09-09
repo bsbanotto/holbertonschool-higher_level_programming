@@ -1,0 +1,29 @@
+Importing say_my_name function to doctest
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing for correct usage
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Testing for only first name entry
+    >>> say_my_name("Billy")
+    My name is Billy
+
+Testing for non-string passed for first name
+    >>> say_my_name(1337, "Code")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Testing for non-string passed for last name
+    >>> say_my_name("1337", 1337)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+Testing for nothing passed
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
