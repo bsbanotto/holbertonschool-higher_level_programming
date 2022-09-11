@@ -27,3 +27,9 @@ Testing size is a negative float
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
+
+Testing size is a string
+    >>> print_square("hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
