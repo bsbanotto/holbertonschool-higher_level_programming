@@ -1,0 +1,29 @@
+Importing matrix_divided function to doctest
+    >>> print_square = __import__('4-print_square').print_square
+
+Testing a valid input with all integers
+    >>> print_square(2)
+    ##
+    ##
+     
+Testing a zero input
+    >>> print_square(0)
+    <BLANKLINE>
+
+Testing a value less than 0
+    >>> print_square(-3)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+Testing size is a float
+    >>> print_square(3.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Testing size is a negative float
+    >>> print_square(-3.141592654)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
