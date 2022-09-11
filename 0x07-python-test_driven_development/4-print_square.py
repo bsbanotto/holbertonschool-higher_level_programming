@@ -10,6 +10,10 @@ def print_square(size):
     if type(size) is str:
         raise TypeError("size must be an integer")
 
+    if size is None:
+        raise TypeError("print_square() missing 1 required positional\
+argument: 'size'")
+
     if size < 0:
         if type(size) is float:
             raise TypeError("size must be an integer")
