@@ -51,3 +51,9 @@ Testing for too many arguments
     Traceback (most recent call last):
         ...
     TypeError: print_square() takes 1 positional argument but 2 were given
+
+Testing for passing an undefined variable
+    >>> print_square(a)
+    Traceback (most recent call last):
+        ...
+    NameError: name 'a' is not defined
