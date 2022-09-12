@@ -21,6 +21,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-14, -1, -27]), -1)
         """Testing floats"""
         self.assertAlmostEqual(max_integer([1.3, 5, 9,1]), 9)
+        """Testing single length list"""
+        self.assertEqual(max_integer([9]), 9)
 
     def test_invalid(self):
         """Testing if a string is passed"""
