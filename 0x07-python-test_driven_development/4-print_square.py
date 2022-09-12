@@ -11,7 +11,7 @@ def print_square(size):
         raise TypeError("size must be an integer")
 
     if size is None:
-        raise TypeError("print_square() missing 1 required positional\
+        raise TypeError("print_square() missing 1 required positional \
 argument: 'size'")
 
     if size < 0:
@@ -19,9 +19,6 @@ argument: 'size'")
             raise TypeError("size must be an integer")
         if type(size) is int:
             raise ValueError("size must be >= 0")
-
-    if size is None:
-        raise TypeError("'NoneType' object is not subscriptable")
 
     if type(size) is not int:
         raise TypeError("size must be an integer")
