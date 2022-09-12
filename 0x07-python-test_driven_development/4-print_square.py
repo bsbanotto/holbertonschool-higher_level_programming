@@ -20,6 +20,9 @@ argument: 'size'")
         if type(size) is int:
             raise ValueError("size must be >= 0")
 
+    if size is None:
+        raise TypeError("'NoneType' object is not subscriptable")
+
     if type(size) is not int:
         raise TypeError("size must be an integer")
 
