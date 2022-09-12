@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         """Testing working case with negative integers"""
         self.assertEqual(max_integer([-14, -1, -27]), -1)
         """Testing floats"""
-        self.assertAlmostEqual(max_integer([1.3, 5, 9,1]), 9)
+        self.assertAlmostEqual(max_integer([1.3, 5, 9.1]), 9.1)
         """Testing single length list"""
         self.assertEqual(max_integer([9]), 9)
 
