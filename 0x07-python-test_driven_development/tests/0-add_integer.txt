@@ -58,3 +58,9 @@ Testing for infinity passed
     Traceback (most recent call last):
         ...
     OverflowError: cannot convert float infinity to integer
+
+Testing for None passed
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
