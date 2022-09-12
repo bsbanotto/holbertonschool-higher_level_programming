@@ -2,6 +2,7 @@
 """Inserts two new lines after special characters . ? :
 """
 
+
 def text_indentation(text):
     """Testing first for valid input to function, then printing
     """
