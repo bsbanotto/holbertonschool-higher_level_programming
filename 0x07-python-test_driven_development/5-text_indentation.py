@@ -14,4 +14,4 @@ def text_indentation(text):
     text_question = text_period.replace("? ", "?\n\n")
     text_colon = text_question.replace(": ", ":\n\n")
 
-    print(text_colon)
+    print(text_colon, end="")
