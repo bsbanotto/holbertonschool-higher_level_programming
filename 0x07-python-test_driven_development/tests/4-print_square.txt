@@ -39,3 +39,9 @@ Testing if nothing is passed
     Traceback (most recent call last):
         ...
     TypeError: print_square() missing 1 required positional argument: 'size'
+
+Testing for None passed
+    >>> print_square(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: 'NoneType' object is not subscriptable
