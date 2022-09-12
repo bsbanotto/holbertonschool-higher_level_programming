@@ -13,7 +13,7 @@ def add_integer(a, b=98):
     if a is None:
         raise TypeError("'NoneType' object is not subscriptable")
     if b is None:
-        raise TypeError("'NoneType' object is not subscriptable")    
+        raise TypeError("'NoneType' object is not subscriptable")
 
     if type(a) is complex:
         raise TypeError("a must be an integer")
