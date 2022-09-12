@@ -44,4 +44,4 @@ Testing for None passed
     >>> print_square(None)
     Traceback (most recent call last):
         ...
-    TypeError: 'NoneType' object is not subscriptable"
+    TypeError: size must be an integer
