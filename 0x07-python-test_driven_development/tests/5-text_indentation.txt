@@ -1,0 +1,24 @@
+Importing text_indentation function to doctest    
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Trying text is a string with no delimiters
+    >>> text_indentation("Hello there")
+    Hello there
+
+Trying text is a string with delimiters
+    >>> text_indentation("First line. Second line")
+    First line.
+    <BLANKLINE>
+    Second line
+
+Trying passing an integer
+    >>> text_indentation(1337)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Trying passing nothing
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
