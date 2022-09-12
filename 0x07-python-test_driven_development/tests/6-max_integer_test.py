@@ -8,6 +8,12 @@ class TestMaxInteger(unittest.TestCase):
     """Unit tests for max_integer function
     """
 
+    def test_docstrings(self):
+        """Testing for module documentation"""
+        self.assertTrue(len(__import__('6-max_integer').__doc__) > 1)
+        """Testing for function documentation"""
+        self.assertTrue(len((max_integer).__doc__) > 1)
+
     def test_valid(self):
         """Testing working case with positive integers"""
         self.assertEqual(max_integer([1, 4, 3, 10, 2]), 10)
