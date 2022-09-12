@@ -63,4 +63,4 @@ Testing for None passed
     >>> add_integer(None, 2)
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer
+    TypeError: 'NoneType' object is not subscriptable
