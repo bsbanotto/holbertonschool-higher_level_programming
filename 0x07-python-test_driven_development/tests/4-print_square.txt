@@ -45,3 +45,9 @@ Testing for None passed
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
+
+Testing for too many arguments
+    >>> print_square(10, 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
