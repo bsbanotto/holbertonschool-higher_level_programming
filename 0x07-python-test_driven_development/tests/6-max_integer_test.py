@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+"""Unit test for max_integer([..])
+"""
+import unittest
+max_integer = __import__('6-max_integer').max_integer
+
+class TestMaxInteger(unittest.TestCase):
+    """Unit tests for max_integer function
+    """
+
+    def test_valid(self):
+        """Testing working case with positive integers"""
+        self.assertEqual(max_integer([1, 4, 3, 10, 2]), 10)
+        """Testing working case with negative integers"""
+        self.assertEqual(max_integer([-14, -1, -27]), -1)
+        """Testing floats"""
+        self.assertAlmostEqual(max_integer([1.3, 5, 9,1]), 9)
+
+    def test_invalid(self):
+        """Testing if a string is passed"""
+        self.assertRaises(TypeError, max_integer, [1, "hello", 4, 10])
+        """Testing nothing passed"""
+        self.assertEqual(max_integer([]), None)
+
+
+if __name__ == '__main__':
+    unittest.main()
