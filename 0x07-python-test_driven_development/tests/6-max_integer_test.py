@@ -23,12 +23,16 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([1.3, 5, 9.1]), 9.1)
         """Testing single length list"""
         self.assertEqual(max_integer([9]), 9)
+        """Testing if only a string is passed"""
+        self.assertEqual(max_integer("things"), "t")
 
     def test_invalid(self):
         """Testing if a string is passed"""
         self.assertRaises(TypeError, max_integer, [1, "hello", 4, 10])
         """Testing nothing passed"""
         self.assertEqual(max_integer([]), None)
+        """Testing an integer passed, not list"""
+        self.assertRaises(TypeError, max_integer, 9)
 
 
 if __name__ == '__main__':
