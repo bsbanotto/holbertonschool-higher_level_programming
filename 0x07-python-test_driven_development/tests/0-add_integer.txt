@@ -52,3 +52,10 @@ Testing if complex number is passed
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
+Testing for infinity passed
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    
