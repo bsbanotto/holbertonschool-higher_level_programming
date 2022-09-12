@@ -49,3 +49,8 @@ Testing if no matrix is passed
         ...
     SyntaxError: invalid syntax
 
+Testing if None is passed as matrix
+    >>> matrix_divided(None, 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: 'NoneType' object is not subscriptable
