@@ -11,8 +11,7 @@ def print_square(size):
         raise TypeError("size must be an integer")
 
     if size is None:
-        raise TypeError("print_square() missing 1 required positional \
-argument: 'size'")
+        raise TypeError("'NoneType' object is not subscriptable")
 
     if size < 0:
         if type(size) is float:
