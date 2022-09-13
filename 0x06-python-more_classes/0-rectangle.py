@@ -12,9 +12,9 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """ Here is the metod to initialize our rectangle
         """
-        self.__width = width
-        self.__height = height
-    
+        self.width = width
+        self.height = height
+
     @property
     def width(self):
         """ Retrieves the width of self
