@@ -59,3 +59,21 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return(0)
         return((self.__height + self.__width) * 2)
+
+    def __str__(self):
+        """ Returns a string representation of a rectangle that is human readable
+        """
+        if self.__height == 0 or self.__width == 0:
+            return("")
+        display = ""
+        for i in range(0, self.__height):
+            if i > 0:
+                display += "\n"
+            for j in range(0, self.__width):
+                display += "#"
+        return(display)
+
+    def __repr__(self):
+        """ Returns a string representation of the rectangle that is machine readable
+        """
+        return("Rectangle({}, {})".format(self.__width, self.__height))
