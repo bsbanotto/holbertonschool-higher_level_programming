@@ -8,7 +8,7 @@ Testing a valid input with all integers
      
 Testing a zero input
     >>> print_square(0)
-    <BLANKLINE>
+
 
 Testing a value less than 0
     >>> print_square(-3)
