@@ -43,3 +43,7 @@ Testing for improper input
     Traceback (most recent call last):
         ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Testing for valid input
+>>> bg.integer_validator("Positive", 5)
+
