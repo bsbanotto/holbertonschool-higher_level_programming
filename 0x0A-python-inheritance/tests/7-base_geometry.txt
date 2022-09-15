@@ -12,6 +12,9 @@ Testing for documentation
     True
     >>> len(__import__('7-base_geometry').BaseGeometry.integer_validator.__doc__) > 1
     True
+    >>> print(bg.__doc__)
+     Empty class, except for exception
+    <BLANKLINE>
 
 Testing for improper input
     >>> bg.integer_validator("distance", -4)
@@ -57,3 +60,4 @@ Testing for improper input
 Testing for valid input
 >>> bg.integer_validator("Positive", 5)
 
+>>> bg.integer_validator("Seven", 7)
