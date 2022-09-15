@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" This module checks to see if an object is an instance of, or instance of a class
-that inherited from, the specified class
+""" This module checks to see if an object is an instance of, or instance of a
+class that inherited from, the specified class
 """
 
 
