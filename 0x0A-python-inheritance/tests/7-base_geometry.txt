@@ -28,3 +28,8 @@ Testing for improper input
     Traceback (most recent call last):
         ...
     TypeError: <name> must be an integer
+
+    >>> bg.integer_validator("String", "Hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: <name> must be an integer
