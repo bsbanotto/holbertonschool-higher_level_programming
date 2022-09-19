@@ -24,5 +24,5 @@ class Student():
                 studentDictionary[i] = vars(self)[i]
             except:
                 Exception
-            pass
+
         return studentDictionary
