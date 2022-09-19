@@ -4,7 +4,7 @@
 
 
 def read_file(filename=""):
-    """Given a filename, print to stdout
+    """Given a filename, print all contents to stdout
     """
     with open(filename, encoding="utf=8") as file:
         text = file.read()
