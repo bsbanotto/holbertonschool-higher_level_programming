@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """This module writes an Object to a text file using JSON
 """
 import json
