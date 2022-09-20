@@ -60,3 +60,22 @@ class Square(Rectangle):
                 self.x = kwargs['x']
             if key == "y":
                 self.y = kwargs['y']
+
+    @property
+    def size(self):
+        """
+        Returns square size
+        """
+        return self.width
+    
+    @size.setter
+    def size(self, value):
+        """
+        Sets square size
+        """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.width = value
+        self.height = value
