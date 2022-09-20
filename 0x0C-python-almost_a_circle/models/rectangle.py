@@ -93,3 +93,24 @@ class Rectangle(Base):
         returns the area of the rectangle
         """
         return(self.__height * self.__width)
+
+    def display(self):
+        """
+        displays the rectangle using '#' symbols
+        """
+        for row in range(0, self.__height):
+            for column in range(0, self.__width):
+                print("#", end="")
+            print("")
+
+    def __str__(self):
+        """
+        Override the __str__ method to return [Rectangle]
+        (<id>) <x>/<y> - <width>/<height>
+        """
+        w = self.__width
+        h = self.__height
+        x = self.__x
+        y = self.__y
+        iden = self.id
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(iden, x, y, w, h))
