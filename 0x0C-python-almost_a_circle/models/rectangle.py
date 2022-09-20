@@ -102,10 +102,10 @@ class Rectangle(Base):
         """
         displays the rectangle using '#' symbols, offset by x and y
         """
-        for j in range(0, self.__y):
+        for line in range(0, self.__y):
             print("")
         for row in range(0, self.__height):
-            for i in range(0, self.__x):
+            for space in range(0, self.__x):
                 print(" ", end="")
             for column in range(0, self.__width):
                 print("#", end="")
@@ -123,28 +123,41 @@ class Rectangle(Base):
         iden = self.id
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(iden, x, y, w, h))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-        Assigns an argument to each attribute
-        This is a no-keyword argument, so order is very, very important
+        Assigns a key:value argument to each attribute
         """
-        if len(args) == 1:
-            self.id = args[0]
-        if len(args) == 2:
-            self.id = args[0]
-            self.width = args[1]
-        if len(args) == 3:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-        if len(args) == 4:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-        if len(args) == 5:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
+        if args:
+            print("in ARGS")
+            if len(args) == 1:
+                self.id = args[0]
+            if len(args) == 2:
+                self.id = args[0]
+                self.width = args[1]
+            if len(args) == 3:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+            if len(args) == 4:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+            if len(args) == 5:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+
+        for key, value in kwargs.items():
+            if key == "id":
+                self.id = kwargs['id']
+            if key == "width":
+                self.width = kwargs['width']
+            if key == "height":
+                self.height = kwargs['height']
+            if key == "x":
+                self.x = kwargs['x']
+            if key == "y":
+                self.y = kwargs['y']
