@@ -116,10 +116,10 @@ class Rectangle(Base):
         Override the __str__ method to return [Rectangle]
         (<id>) <x>/<y> - <width>/<height>
         """
-        w = self.__width
-        h = self.__height
-        x = self.__x
-        y = self.__y
+        w = self.width
+        h = self.height
+        x = self.x
+        y = self.y
         iden = self.id
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(iden, x, y, w, h))
 
