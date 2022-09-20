@@ -50,7 +50,8 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """ Sets the width of self rectangle
+        """
+        Sets the width of self rectangle
         """
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -60,7 +61,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """ Sets the height of self rectangle
+        """
+        Sets the height of self rectangle
         """
         if type(value) is not int:
             raise TypeError("height must be an integer")
@@ -70,7 +72,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """ Sets the value of x offset
+        """
+        Sets the value of x offset
         """
         if type(value) is not int:
             raise TypeError("x must be an integer")
@@ -80,7 +83,8 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """ Sets the value of y offset
+        """
+        Sets the value of y offset
         """
         if type(value) is not int:
             raise TypeError("y must be an integer")
@@ -96,9 +100,13 @@ class Rectangle(Base):
 
     def display(self):
         """
-        displays the rectangle using '#' symbols
+        displays the rectangle using '#' symbols, offset by x and y
         """
+        for j in range(0, self.__y):
+            print("")
         for row in range(0, self.__height):
+            for i in range(0, self.__x):
+                print(" ", end="")
             for column in range(0, self.__width):
                 print("#", end="")
             print("")
