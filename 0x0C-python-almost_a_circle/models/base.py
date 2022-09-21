@@ -25,7 +25,7 @@ class Base:
         """
         Method to return the JSON string representation of list_dictionaries
         """
-        if not list_dictionaries:
-            return "[]"
-        else:
+        if list_dictionaries:
             return json.dumps(list_dictionaries)
+        else:
+            return "[]"
