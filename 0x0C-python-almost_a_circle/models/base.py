@@ -36,10 +36,9 @@ class Base:
         """
         Writes the JSON string representation of list_objs to a file
         """
-        print("I'm inside my save_to_file method")
-        print(cls.__name__+".json")
         dicts = []
-        dicts.append(to_json_string(list_objs))
-        print(dicts)
+        if list_objs is not None:
+            for thing in list_objs:
+                dicts.append(thing.to_dictionary())
         with open(cls.__name__+".json", "w", encoding="UTF8") as newFile:
-            return json.dump(dicts, newFile)
+            newFile.write(cls.to_json_string(dicts))
