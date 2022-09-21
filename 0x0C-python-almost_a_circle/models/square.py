@@ -79,3 +79,15 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
+
+    def to_dictionary(self):
+        """
+        Returns the dictionary representation of a Square
+        """
+        squareDict = {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }
+        return squareDict
