@@ -76,6 +76,6 @@ class Base:
                 dlist = []
                 for obj in cls.from_json_string(file_string):
                     dlist.append(cls.create(**obj))
-            except:
-                dlist = []
-            return dlist
+        except:
+            dlist = []
+        return dlist
