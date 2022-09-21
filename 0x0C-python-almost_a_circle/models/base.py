@@ -26,7 +26,6 @@ class Base:
         """
         Method to return the JSON string representation of list_dictionaries
         """
-        print("I'm inside my to_json_string method")
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
