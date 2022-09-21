@@ -42,3 +42,13 @@ class Base:
                 dicts.append(thing.to_dictionary())
         with open(cls.__name__+".json", "w", encoding="UTF8") as newFile:
             newFile.write(cls.to_json_string(dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        This method returns the list of the JSON string representation
+        """
+        if json_string is None or len(json_string) == 0:
+            return ""
+        else:
+            return json.loads(json_string)
