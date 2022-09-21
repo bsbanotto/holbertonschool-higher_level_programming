@@ -70,8 +70,8 @@ class Base:
         """
         This method returns a list of instances of objects
         """
-        with open(cls.__name__+".json", "r", encoding="UTF8") as openedFile:
-            try:
+        try:
+            with open(cls.__name__+".json", "r", encoding="UTF8") as openedFile:
                 file_string = openedFile.read()
                 dlist = []
                 for obj in cls.from_json_string(file_string):
