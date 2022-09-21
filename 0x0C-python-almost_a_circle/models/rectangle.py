@@ -167,9 +167,9 @@ class Rectangle(Base):
         """
         rectDict = {
             "id": self.id,
-            "width": self.width,
-            "height": self.height,
-            "x": self.x,
-            "y": self.y
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y
         }
         return rectDict
