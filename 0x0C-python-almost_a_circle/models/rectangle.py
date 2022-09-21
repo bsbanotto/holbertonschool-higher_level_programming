@@ -127,7 +127,7 @@ class Rectangle(Base):
         """
         Assigns a key:value argument to each attribute
         """
-        if args:
+        if args is not None and len(args) != 0:
             if len(args) == 1:
                 self.id = args[0]
             if len(args) == 2:
