@@ -54,6 +54,9 @@ class test_base(unittest.TestCase):
         self.assertEqual(base3.id, 2)
         self.assertEqual(base4.id, 3)
         self.assertEqual(base5.id, 4)
+        with self.assertRaises(TypeError):
+            Base(1, 12)
+
 
     def test_none_to_json_string(self):
         """
