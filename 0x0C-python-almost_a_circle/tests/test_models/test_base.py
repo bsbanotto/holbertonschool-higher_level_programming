@@ -14,7 +14,7 @@ from models.square import Square
 
 class test_base(unittest.TestCase):
     """
-    This class will unit test the base class
+    This class will unit test the Base class
     """
 
     def test_module_docstring(self):
@@ -25,7 +25,7 @@ class test_base(unittest.TestCase):
 
     def test_class_docstring(self):
         """
-        Test base class documentation exists
+        Test Base class documentation exists
         """
         self.assertTrue(len(Base.__doc__) >= 1)
 
@@ -85,3 +85,4 @@ class test_base(unittest.TestCase):
         self.assertTrue(type(list_output) is list)
         self.assertTrue(type(json_list_input) is str)
         self.assertEqual(len(list_output), 2)
+
