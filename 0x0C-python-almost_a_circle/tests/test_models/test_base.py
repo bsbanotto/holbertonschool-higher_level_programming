@@ -48,15 +48,19 @@ class test_base(unittest.TestCase):
         base2 = Base(2)
         base3 = Base()
         base4 = Base()
-        base5 = Base(None)
         self.assertEqual(base1.id, 1)
         self.assertEqual(base2.id, 2)
         self.assertEqual(base3.id, 2)
         self.assertEqual(base4.id, 3)
-        self.assertEqual(base5.id, 4)
+
+    def test_bad_init(self):
+        """
+        Tests for bad values passed to Base.id
+        """
         with self.assertRaises(TypeError):
             Base(1, 12)
-
+        base5 = Base(None)
+        self.assertEqual(base5.id, 1)
 
     def test_none_to_json_string(self):
         """
@@ -90,3 +94,6 @@ class test_base(unittest.TestCase):
         self.assertTrue(type(list_output) is list)
         self.assertTrue(type(json_list_input) is str)
         self.assertEqual(len(list_output), 2)
+
+if __name__ == '__main__':
+    unittest.main()

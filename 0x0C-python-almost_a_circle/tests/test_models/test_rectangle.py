@@ -42,3 +42,6 @@ class test_rectangle(unittest.TestCase):
         self.assertTrue(len(Rectangle.__str__.__doc__) >= 1)
         self.assertTrue(len(Rectangle.update.__doc__) >= 1)
         self.assertTrue(len(Rectangle.to_dictionary.__doc__) >= 1)
+
+if __name__ == '__main__':
+    unittest.main()
