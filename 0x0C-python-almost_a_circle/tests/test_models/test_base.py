@@ -38,3 +38,14 @@ class test_base(unittest.TestCase):
         self.assertTrue(len(Base.from_json_string.__doc__) >= 1)
         self.assertTrue(len(Base.create.__doc__) >= 1)
         self.assertTrue(len(Base.load_from_file.__doc__) >= 1)
+
+    def test_init(self):
+        """
+        Tests that id is created correctly
+        """
+        base1 = Base()
+        base2 = Base(2)
+        base3 = Base()
+        self.assertEqual(base1.id, 1)
+        self.assertEqual(base2.id, 2)
+        self.assertEqual(base3.id, 2)
