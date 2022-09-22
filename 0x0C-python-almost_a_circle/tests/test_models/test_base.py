@@ -48,10 +48,12 @@ class test_base(unittest.TestCase):
         base2 = Base(2)
         base3 = Base()
         base4 = Base()
+        base5 = Base(None)
         self.assertEqual(base1.id, 1)
         self.assertEqual(base2.id, 2)
         self.assertEqual(base3.id, 2)
         self.assertEqual(base4.id, 3)
+        self.assertEqual(base5.id, 4)
 
     def test_none_to_json_string(self):
         """
