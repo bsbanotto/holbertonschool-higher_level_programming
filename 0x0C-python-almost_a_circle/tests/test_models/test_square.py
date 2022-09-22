@@ -4,8 +4,6 @@ This is the unittest module for the square class
 """
 
 
-
-
 import unittest
 import pep8
 import json
@@ -39,4 +37,3 @@ class test_square(unittest.TestCase):
         self.assertTrue(len(Square.__str__.__doc__) >= 1)
         self.assertTrue(len(Square.update.__doc__) >= 1)
         self.assertTrue(len(Square.to_dictionary.__doc__) >= 1)
-

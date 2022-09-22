@@ -85,4 +85,3 @@ class test_base(unittest.TestCase):
         self.assertTrue(type(list_output) is list)
         self.assertTrue(type(json_list_input) is str)
         self.assertEqual(len(list_output), 2)
-
