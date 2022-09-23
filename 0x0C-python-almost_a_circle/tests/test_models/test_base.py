@@ -75,5 +75,45 @@ class test_base(unittest.TestCase):
         self.assertEqual(self.base5.id, -42)
         self.assertEqual(self.base6.id, 4)
 
+    def test_bad_init(self):
+        """
+        Tests for bad values passed to Base.id
+        """
+        with self.assertRaises(TypeError):
+            Base(1, 12)
+
+    def test_none_to_json_string(self):
+        """
+        Tests that None passed to_json_string is functioning correctly
+        """
+        json_none = Base.to_json_string(None)
+        self.assertEqual(json_none, "[]")
+        self.assertEqual(type(json_none), str)
+
+    def test_two_object_dict_to_json_string(self):
+        """
+        Tests that two objects go to json file properly
+        """
+        Base.base_nb__objects = 0
+        o1 = {"id": 420, "width": 7, "height": 14, "x": 0, "y": 2}
+        o2 = {"id": 98, "width": 2, "height": 4, "x": 2, "y": 0}
+        json_str = Base.to_json_string([o1, o2])
+        self.assertEqual(type(json_str), str)
+        self.assertEqual(len(json.loads(json_str)), 2)
+
+    def test_two_object_dict_from_json_string(self):
+        """
+        Tests that a two item list functions properly
+        """
+        list_input = [
+            {"id": 420, "width": 7, "height": 14, "x": 0, "y": 2},
+            {"id": 98, "width": 2, "height": 4, "x": 2, "y": 0}
+        ]
+        json_list_input = Base.to_json_string(list_input)
+        list_output = Base.from_json_string(json_list_input)
+        self.assertTrue(type(list_output) is list)
+        self.assertTrue(type(json_list_input) is str)
+        self.assertEqual(len(list_output), 2)
+
 if __name__ == '__main__':
     unittest.main()
