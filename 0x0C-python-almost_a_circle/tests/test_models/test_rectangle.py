@@ -146,12 +146,6 @@ class test_rectangle(unittest.TestCase):
         r2.update(id=1, y=1)
         self.assertEqual(str(r1), str(r2))
 
-    def test_bad_update(self):
-        """
-        Test for improper use of update method
-        """
-        pass
-
     def test_to_dictionary(self):
         """
         Tests for proper use of to_dictionary method
