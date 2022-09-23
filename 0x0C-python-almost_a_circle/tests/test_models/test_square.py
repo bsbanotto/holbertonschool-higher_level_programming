@@ -136,13 +136,10 @@ class test_square(unittest.TestCase):
         """
         Tests for proper use of to_dictionary method
         """
-        pass
-
-    def test_bad_to_dictionary(self):
-        """
-        Tests for improper use of to_dictionary method
-        """
-        pass
+        s1 = Square(10, 2, 1, 0)
+        s1_dictionary = s1.to_dictionary()
+        self.assertTrue(type(s1_dictionary) is dict)
+        self.assertTrue(type(s1) is Square)
 
 if __name__ == '__main__':
     unittest.main()

@@ -150,13 +150,10 @@ class test_rectangle(unittest.TestCase):
         """
         Tests for proper use of to_dictionary method
         """
-        pass
-
-    def test_bad_to_dictionary(self):
-        """
-        Tests for improper use of to_dictionary method
-        """
-        pass
+        r1 = Rectangle(10, 2, 1, 9, 0)
+        r1_dictionary = r1.to_dictionary()
+        self.assertTrue(type(r1_dictionary) is dict)
+        self.assertTrue(type(r1) is Rectangle)
 
 if __name__ == '__main__':
     unittest.main()
