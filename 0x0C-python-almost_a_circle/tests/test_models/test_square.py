@@ -126,13 +126,11 @@ class test_square(unittest.TestCase):
         """
         Tests for proper use of update method
         """
-        pass
-
-    def test_bad_update(self):
-        """
-        Tests for improper use of update method
-        """
-        pass
+        square1 = Square(2, 3, 4, 1)
+        square2 = Square(2, 3, 4, 5)
+        self.assertNotEqual(str(square1), str(square2))
+        square2.update(id=1)
+        self.assertEqual(str(square1), str(square2))
 
     def test_to_dictionary(self):
         """

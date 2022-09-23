@@ -140,7 +140,11 @@ class test_rectangle(unittest.TestCase):
         """
         Test for proper use of update method
         """
-        pass
+        r1 = Rectangle(2, 3, 4, 1, 1)
+        r2 = Rectangle(2, 3, 4, 5, 2)
+        self.assertNotEqual(str(r1), str(r2))
+        r2.update(id=1, y=1)
+        self.assertEqual(str(r1), str(r2))
 
     def test_bad_update(self):
         """

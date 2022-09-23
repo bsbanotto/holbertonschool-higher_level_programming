@@ -62,18 +62,16 @@ class test_base(unittest.TestCase):
         """
         Tests self.id is created correctly
         """
-        self.base1 = Base()
-        self.base2 = Base(2)
-        self.base3 = Base()
-        self.base4 = Base()
+        self.base1 = Base(0)
+        self.base2 = Base(1)
+        self.base3 = Base(2)
+        self.base4 = Base(3)
         self.base5 = Base(-42)
-        self.base6 = Base(None)
-        self.assertEqual(self.base1.id, 1)
-        self.assertEqual(self.base2.id, 2)
+        self.assertEqual(self.base1.id, 0)
+        self.assertEqual(self.base2.id, 1)
         self.assertEqual(self.base3.id, 2)
         self.assertEqual(self.base4.id, 3)
         self.assertEqual(self.base5.id, -42)
-        self.assertEqual(self.base6.id, 4)
 
     def test_bad_init(self):
         """
@@ -101,13 +99,13 @@ class test_base(unittest.TestCase):
         self.assertEqual(type(json_str), str)
         self.assertEqual(len(json.loads(json_str)), 2)
 
-    def test_save_to_file(self):
+    def test_save_to_file_rectangle(self):
         """
         Tests proper use of save_to_file method
         """
         pass
 
-    def test_bad_save_to_file(self):
+    def test_save_to_file_square(self):
         """
         Tests improper use of save_to_file method
         """
@@ -127,31 +125,55 @@ class test_base(unittest.TestCase):
         self.assertTrue(type(json_list_input) is str)
         self.assertEqual(len(list_output), 2)
 
-    def test_bad_from_json_string(self):
+    def test_None_from_json_string(self):
         """
-        Tests improper use of from_json_string method
+        Tests from_json_string method on None
         """
-        pass
+        list_input = None
+        json_list_input = Base.to_json_string(list_input)
+        list_output = Base.from_json_string(json_list_input)
+        self.assertTrue(type(list_output) is list)
+        self.assertTrue(type(json_list_input) is str)
+        self.assertEqual(len(list_output), 0)
 
-    def test_create(self):
+    def test_empty_from_json_string(self):
         """
-        Tests proper use of create method
+        Tests from_json_string method on empty string
         """
-        pass
+        list_input = []
+        json_list_input = Base.to_json_string(list_input)
+        list_output = Base.from_json_string(json_list_input)
+        self.assertTrue(type(list_output) is list)
+        self.assertTrue(type(json_list_input) is str)
+        self.assertEqual(len(list_output), 0)
 
-    def test_bad_create(self):
+    def test_create_rectangle(self):
         """
-        Tests improper use of create method
+        Tests create method for rectangle
         """
-        pass
+        r1 = Rectangle(3, 5, 1, 0, 0)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertEqual(str(r1), str(r2))
+        self.assertNotEqual(r1, r2)
 
-    def test_load_from_file(self):
+    def test_create_square(self):
+        """
+        Tests create method for square
+        """
+        s1 = Square(3, 5, 1, 0)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Square.create(**s1_dictionary)
+        self.assertEqual(str(s1), str(s2))
+        self.assertNotEqual(s1, s2)
+
+    def test_load_from_file_rectangle(self):
         """
         Tests proper use of load_from_file method
         """
         pass
 
-    def test_bad_load_from_file(self):
+    def test_load_from_file_square(self):
         """
         Tests improper use of load_from_file method
         """
