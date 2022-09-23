@@ -62,16 +62,17 @@ class test_base(unittest.TestCase):
         """
         Tests self.id is created correctly
         """
-        self.base1 = Base(0)
-        self.base2 = Base(1)
+        self.base1 = Base()
+        self.base2 = Base()
         self.base3 = Base(2)
         self.base4 = Base(3)
         self.base5 = Base(-42)
-        self.assertEqual(self.base1.id, 0)
-        self.assertEqual(self.base2.id, 1)
+        self.assertEqual(self.base1.id, 1)
+        self.assertEqual(self.base2.id, 2)
         self.assertEqual(self.base3.id, 2)
         self.assertEqual(self.base4.id, 3)
         self.assertEqual(self.base5.id, -42)
+        self.assertEqual(self.base2.id, self.base3.id)
 
     def test_bad_init(self):
         """
@@ -107,9 +108,9 @@ class test_base(unittest.TestCase):
         """
         Tests proper use of save_to_file method
         """
-        r1 = Rectangle(10, 7, 2, 8, 0)
+        r1 = Rectangle(10, 7, 6, 8, 0)
         Rectangle.save_to_file([r1])
-        read_string = '[{"id": 0, "width": 10, "height": 7, "x": 2, "y": 8}]'
+        read_string = '[{"id": 0, "width": 10, "height": 7, "x": 6, "y": 8}]'
 
         with open("Rectangle.json", "r") as file:
             test_String = file.read()

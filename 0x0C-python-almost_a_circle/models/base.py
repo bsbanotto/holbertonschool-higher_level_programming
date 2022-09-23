@@ -59,9 +59,9 @@ class Base:
         This method returns an instance with all attributes already set
         """
         if cls.__name__ == 'Rectangle':
-            temp = cls(1, 2)
+            temp = cls(1, 2, 3, 4, 5)
         if cls.__name__ == 'Square':
-            temp = cls(42)
+            temp = cls(42, 69, 420, 7)
         temp.update(**dictionary)
         return(temp)
 
