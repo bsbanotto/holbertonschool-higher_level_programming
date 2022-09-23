@@ -81,6 +81,13 @@ class test_base(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base(1, 12)
 
+    def test_odd_init(self):
+        """
+        Tests for strings, boolean, other random id input
+        """
+        self.base_string = Base("string")
+        self.assertEqual(self.base_string.id, "string")
+
     def test_none_to_json_string(self):
         """
         Tests that None passed to_json_string is functioning correctly
