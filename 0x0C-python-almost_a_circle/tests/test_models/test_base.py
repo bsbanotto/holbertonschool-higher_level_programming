@@ -90,7 +90,7 @@ class test_base(unittest.TestCase):
         self.assertEqual(json_none, "[]")
         self.assertEqual(type(json_none), str)
 
-    def test_two_object_dict_to_json_string(self):
+    def test_to_json_string(self):
         """
         Tests that two objects go to json file properly
         """
@@ -101,7 +101,19 @@ class test_base(unittest.TestCase):
         self.assertEqual(type(json_str), str)
         self.assertEqual(len(json.loads(json_str)), 2)
 
-    def test_two_object_dict_from_json_string(self):
+    def test_save_to_file(self):
+        """
+        Tests proper use of save_to_file method
+        """
+        pass
+
+    def test_bad_save_to_file(self):
+        """
+        Tests improper use of save_to_file method
+        """
+        pass
+
+    def test_from_json_string(self):
         """
         Tests that a two item list functions properly
         """
@@ -114,6 +126,36 @@ class test_base(unittest.TestCase):
         self.assertTrue(type(list_output) is list)
         self.assertTrue(type(json_list_input) is str)
         self.assertEqual(len(list_output), 2)
+
+    def test_bad_from_json_string(self):
+        """
+        Tests improper use of from_json_string method
+        """
+        pass
+
+    def test_create(self):
+        """
+        Tests proper use of create method
+        """
+        pass
+
+    def test_bad_create(self):
+        """
+        Tests improper use of create method
+        """
+        pass
+
+    def test_load_from_file(self):
+        """
+        Tests proper use of load_from_file method
+        """
+        pass
+
+    def test_bad_load_from_file(self):
+        """
+        Tests improper use of load_from_file method
+        """
+        pass
 
 if __name__ == '__main__':
     unittest.main()

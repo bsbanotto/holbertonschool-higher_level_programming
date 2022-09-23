@@ -69,12 +69,12 @@ class test_rectangle(unittest.TestCase):
         self.assertEqual(rectangle1.x, 3)
         self.assertEqual(rectangle1.y, 4)
         self.assertEqual(rectangle1.id, 0)
-        rectangle2 = Rectangle(10, 10, 0, 0, 1)
+        rectangle2 = Rectangle(10, 10, 0, 0, -1)
         self.assertEqual(rectangle2.width, 10)
         self.assertEqual(rectangle2.height, 10)
         self.assertEqual(rectangle2.x, 0)
         self.assertEqual(rectangle2.y, 0)
-        self.assertEqual(rectangle2.id, 1)
+        self.assertEqual(rectangle2.id, -1)
 
     def test_make_incorrect_rectangle(self):
         """
@@ -126,10 +126,8 @@ class test_rectangle(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as out:
             rectangle2.display()
             self.assertEqual('\n\n  ##\n  ##\n', out.getvalue())
-        rectangle1.id = 0
-        rectangle2.id = 0
 
-    def test__str__(self):
+    def test___str__(self):
         """
         Tests proper function of __str__ method
         """
@@ -137,8 +135,30 @@ class test_rectangle(unittest.TestCase):
         self.assertEqual(rectangle1.__str__(), "[Rectangle] (42) 0/0 - 2/4")
         rectangle2 = Rectangle(3, 6, 0, 0, 1)
         self.assertEqual(rectangle2.__str__(), "[Rectangle] (1) 0/0 - 3/6")
-        rectangle1.id = 0
-        rectangle2.id = 0
+
+    def test_update(self):
+        """
+        Test for proper use of update method
+        """
+        pass
+
+    def test_bad_update(self):
+        """
+        Test for improper use of update method
+        """
+        pass
+
+    def test_to_dictionary(self):
+        """
+        Tests for proper use of to_dictionary method
+        """
+        pass
+
+    def test_bad_to_dictionary(self):
+        """
+        Tests for improper use of to_dictionary method
+        """
+        pass
 
 if __name__ == '__main__':
     unittest.main()
