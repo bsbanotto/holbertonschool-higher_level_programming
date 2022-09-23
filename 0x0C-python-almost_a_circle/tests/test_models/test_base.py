@@ -88,6 +88,10 @@ class test_base(unittest.TestCase):
         self.assertEqual(json_none, "[]")
         self.assertEqual(type(json_none), str)
 
+        json_empty = Base.to_json_string([])
+        self.assertEqual(json_empty, "[]")
+        self.assertEqual(type(json_empty), str)
+
     def test_to_json_string(self):
         """
         Tests that two objects go to json file properly
