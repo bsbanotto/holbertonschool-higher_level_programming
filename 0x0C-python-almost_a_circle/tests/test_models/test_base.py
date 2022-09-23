@@ -120,7 +120,13 @@ class test_base(unittest.TestCase):
         """
         Tests improper use of save_to_file method
         """
-        pass
+        s1 = Square(10, 7, 6, 0)
+        Square.save_to_file([s1])
+        read_string = '[{"id": 0, "size": 10, "x": 7, "y": 6}]'
+
+        with open("Square.json", "r") as file:
+            test_String = file.read()
+        self.assertEqual(test_String, read_string)
 
     def test_from_json_string(self):
         """
@@ -180,15 +186,35 @@ class test_base(unittest.TestCase):
 
     def test_load_from_file_rectangle(self):
         """
-        Tests proper use of load_from_file method
+        Tests proper use of load_from_file method on rectangle
         """
-        pass
+        r1 = Rectangle(10, 7, 2, 8, 0)
+        r2 = Rectangle(2, 4, 0, 0, 0)
+        list_rectangles_input = [r1, r2]
+        Rectangle.save_to_file(list_rectangles_input)
+
+        list_rectangles_output = Rectangle.load_from_file()
+
+        self.assertEqual(str(list_rectangles_input[0]),
+                         str(list_rectangles_output[0]))
+        self.assertEqual(str(list_rectangles_input[1]),
+                         str(list_rectangles_output[1]))
 
     def test_load_from_file_square(self):
         """
-        Tests improper use of load_from_file method
+        Tests proper use of load_from_file method on square
         """
-        pass
+        s1 = Square(10, 7, 2, 0)
+        s2 = Square(2, 4, 0, 0)
+        list_squares_input = [s1, s2]
+        Square.save_to_file(list_squares_input)
+
+        list_squares_output = Square.load_from_file()
+
+        self.assertEqual(str(list_squares_input[0]),
+                         str(list_squares_output[0]))
+        self.assertEqual(str(list_squares_input[1]),
+                         str(list_squares_output[1]))
 
 if __name__ == '__main__':
     unittest.main()
