@@ -131,6 +131,10 @@ class test_square(unittest.TestCase):
         self.assertNotEqual(str(square1), str(square2))
         square2.update(id=1)
         self.assertEqual(str(square1), str(square2))
+        s3 = Square(3, 6, 9, 0)
+        s4 = Square(1, 2, 3, 4)
+        s4.update(0, 3, 6, 9)
+        self.assertEqual(str(s3), str(s4))
 
     def test_to_dictionary(self):
         """

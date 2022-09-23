@@ -145,6 +145,10 @@ class test_rectangle(unittest.TestCase):
         self.assertNotEqual(str(r1), str(r2))
         r2.update(id=1, y=1)
         self.assertEqual(str(r1), str(r2))
+        r3 = Rectangle(3, 6, 9, 12, 0)
+        r4 = Rectangle(1, 2, 3, 4, 0)
+        r4.update(0, 3, 6, 9, 12)
+        self.assertEqual(str(r3), str(r4))
 
     def test_to_dictionary(self):
         """
