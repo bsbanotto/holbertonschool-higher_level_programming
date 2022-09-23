@@ -83,10 +83,19 @@ class test_base(unittest.TestCase):
 
     def test_odd_init(self):
         """
-        Tests for strings, boolean, other random id input
+        Tests for strings input
         """
         self.base_string = Base("string")
         self.assertEqual(self.base_string.id, "string")
+
+    def test_nu_objects(self):
+        """
+        Tests forcint __nb_objects = 0, then creating empty to see index
+        """
+        Base._Base__nb_objects = 0
+        self.assertEqual(Base._Base__nb_objects, 0)
+        Base()
+        self.assertEqual(Base._Base__nb_objects, 1)
 
     def test_none_to_json_string(self):
         """
