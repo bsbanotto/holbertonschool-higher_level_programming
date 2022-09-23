@@ -107,7 +107,13 @@ class test_base(unittest.TestCase):
         """
         Tests proper use of save_to_file method
         """
-        pass
+        r1 = Rectangle(10, 7, 2, 8, 0)
+        Rectangle.save_to_file([r1])
+        read_string = '[{"id": 0, "width": 10, "height": 7, "x": 2, "y": 8}]'
+
+        with open("Rectangle.json", "r") as file:
+            test_String = file.read()
+        self.assertEqual(test_String, read_string)
 
     def test_save_to_file_square(self):
         """
