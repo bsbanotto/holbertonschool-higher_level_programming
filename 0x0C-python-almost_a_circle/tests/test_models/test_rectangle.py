@@ -75,6 +75,9 @@ class test_rectangle(unittest.TestCase):
         self.assertEqual(rectangle2.x, 0)
         self.assertEqual(rectangle2.y, 0)
         self.assertEqual(rectangle2.id, -1)
+        rectangle3 = Rectangle(1, 2)
+        rectangle4 = Rectangle(1, 2, 3)
+        rectangle5 = Rectangle(1, 2, 3, 4)
 
     def test_make_incorrect_rectangle(self):
         """
