@@ -137,8 +137,10 @@ class test_base(unittest.TestCase):
         Tests improper use of save_to_file method
         """
         s1 = Square(10, 7, 6, 0)
-        Square.save_to_file([s1])
-        read_string = '[{"id": 0, "size": 10, "x": 7, "y": 6}]'
+        s2 = Square(1, 2, 3, 4)
+        Square.save_to_file([s1, s2])
+        read_string = '[{"id": 0, "size": 10, "x": 7, "y": 6}, \
+{"id": 4, "size": 1, "x": 2, "y": 3}]'
 
         with open("Square.json", "r") as file:
             test_String = file.read()
