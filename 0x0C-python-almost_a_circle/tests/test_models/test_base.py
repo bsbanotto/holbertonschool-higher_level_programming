@@ -62,8 +62,8 @@ class test_base(unittest.TestCase):
         """
         Tests self.id is created correctly
         """
-        self.base1 = Base()
-        self.base2 = Base()
+        self.base1 = Base(1)
+        self.base2 = Base(2)
         self.base3 = Base(2)
         self.base4 = Base(3)
         self.base5 = Base(-42)
