@@ -70,8 +70,14 @@ class test_square(unittest.TestCase):
         self.assertEqual(square2.y, 0)
         self.assertEqual(square2.id, -8)
         square3 = Square(1)
+        self.assertEqual(square3.size, 1)
         square4 = Square(1, 2)
+        self.assertEqual(square4.size, 1)
+        self.assertEqual(square4.x, 2)
         square5 = Square(1, 2, 3)
+        self.assertEqual(square5.size, 1)
+        self.assertEqual(square5.x, 2)
+        self.assertEqual(square5.y, 3)
 
     def test_build_a_bad_square(self):
         """
