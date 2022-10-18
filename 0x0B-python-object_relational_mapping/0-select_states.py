@@ -13,7 +13,7 @@ def list_states():
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM state")
+    cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
     for row in rows:
         print(row)
