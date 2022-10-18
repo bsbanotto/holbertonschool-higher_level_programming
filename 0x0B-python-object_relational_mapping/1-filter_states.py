@@ -13,7 +13,7 @@ def filter_states():
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE left(name,1)='N' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE ASCII(name)=78 ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
