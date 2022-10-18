@@ -6,7 +6,7 @@ import MySQLdb
 
 
 def filter_states():
-    """This method lists all the states in the table"""
+    """This method lists all the states in the table that start with N"""
     import sys
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                          passwd=sys.argv[2], database=sys.argv[3])
