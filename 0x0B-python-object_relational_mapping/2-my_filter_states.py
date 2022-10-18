@@ -8,7 +8,7 @@ that equal the state name that was passed
 import MySQLdb
 
 
-def filter_states():
+def select_state():
     """
     This method lists all the states in the table that start with
     the given state name
@@ -19,7 +19,7 @@ def filter_states():
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name='{}' ORDER BY id"
+    cur.execute("SELECT * FROM states WHERE name LIKE binary'{}' ORDER BY id"
                 .format(sys.argv[4]))
     rows = cur.fetchall()
     for row in rows:
@@ -30,4 +30,4 @@ def filter_states():
 
 
 if __name__ == "__main__":
-    filter_states()
+    select_state()
