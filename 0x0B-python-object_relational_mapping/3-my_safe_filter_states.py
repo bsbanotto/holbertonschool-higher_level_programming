@@ -19,10 +19,10 @@ def select_state():
 
     cur = db.cursor()
 
-    states = sys.argv[4]
+    state = sys.argv[4]
 
     cur.execute("SELECT * FROM states WHERE name LIKE binary\
-                %(states)s ORDER BY id", {'states': states})
+                %(name)s ORDER BY id", {'name': state})
     rows = cur.fetchall()
     if rows is None:
         return False
