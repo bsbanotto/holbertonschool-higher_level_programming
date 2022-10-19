@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This python script lists all states from hbtn_0e_6_usa
+This python script lists the top state from the states table in hbtn_0e_6_usa
 """
 
 
