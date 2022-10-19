@@ -21,12 +21,21 @@ if __name__ == "__main__":
     session = Session()
     state_name = sys.argv[4]
 
+    """
+    Commented out part is using .one() method
+    needs try/except because returns errors if not exactly one match in table
+    Works here because we can assume there is only one entry
+    """
     # try:
     #     my_state = session.query(State.id, State.name).filter(
     #         State.name == state_name).one()
     #     print("{}".format(my_state.id))
     # except Exception:
     #     print("Not found")
+    """
+    This one is a rip from task 8. Our filter gets us down to a list of states
+    that match sys.argv[4] and we return the first one
+    """
     my_state = session.query(State.id, State.name).filter(
         State.name == state_name).first()
     if my_state:
