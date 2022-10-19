@@ -21,14 +21,15 @@ if __name__ == "__main__":
     session = Session()
     state_name = sys.argv[4]
 
-    try:
-        my_state = session.query(State.id, State.name).filter(State.name
-         == state_name).one()
-        print("{}".format(my_state.id))
-    except Exception:
-        print("Not found")
-    # my_state = session.query(State.id, State.name).order_by(State.id).one()
-    # if my_state:
+    # try:
+    #     my_state = session.query(State.id, State.name).filter(
+    #         State.name == state_name).one()
     #     print("{}".format(my_state.id))
-    # else:
+    # except Exception:
     #     print("Not found")
+    my_state = session.query(State.id, State.name).filter(
+        State.name == state_name).first()
+    if my_state:
+        print("{}".format(my_state.id))
+    else:
+        print("Not found")
