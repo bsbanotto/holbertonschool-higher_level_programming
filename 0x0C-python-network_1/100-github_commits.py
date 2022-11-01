@@ -16,6 +16,6 @@ if __name__ == "__main__":
 
     req = requests.get(url)
     text_file = req.json()
-    for commit in text_file[-10:]:
-        print("{}: {}".format(commit.get('sha'), commit.get('commit')
+    for item in text_file[:10]:
+        print("{}: {}".format(item.get('sha'), item.get('commit')
                               .get('author').get('name')))
