@@ -7,7 +7,7 @@ If no argument is given, q = ""
 If the response is properly JSON formatted and not empty, display[<id>] <name>
 Otherwise
 - Display "Not a valid JSON" if JSON is invalid
-- Display "No result" if the JSON is empty 
+- Display "No result" if the JSON is empty
 """
 import requests
 import sys
