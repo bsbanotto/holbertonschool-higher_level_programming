@@ -31,20 +31,20 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    console.log("Inside charPrint, height: " + this.height)
-    console.log("Inside charPrint, width: "+ this.width)
-    console.log(c)
+    // console.log('Inside charPrint, height: ' + this.height);
+    // console.log('Inside charPrint, width: ' + this.width);
+    // console.log(c);
     if (c) {
       for (let i = 0; i < this.height; i++) {
         console.log(c.repeat(this.width));
       }
     } else {
-      this.print()
-        // for (let i = 0; i < this.height; i++) {
-        // console.log('X'.repeat(this.width));
-      }
+      this.print();
+      // for (let i = 0; i < this.height; i++) {
+      // console.log('X'.repeat(this.width));
     }
   }
 }
+
 module.exports = Rectangle;
 module.exports = Square;
