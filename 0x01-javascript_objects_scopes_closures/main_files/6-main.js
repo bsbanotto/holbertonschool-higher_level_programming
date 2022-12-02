@@ -4,7 +4,7 @@ const Square = require('.././6-square');
 const s1 = new Square(4);
 s1.charPrint();
 
-s1.charPrint('C');
+s1.charPrint('-');
 
 // guillaume@ubuntu:~/0x13$ ./6-main.js
 // XXXX
@@ -15,4 +15,4 @@ s1.charPrint('C');
 // CCCC
 // CCCC
 // CCCC
-// guillaume@ubuntu:~/0x13$ 
+// guillaume@ubuntu:~/0x13$
