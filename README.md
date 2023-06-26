@@ -162,7 +162,7 @@ This repo contains projects for higher level programming, for my second tremeste
     </tr>
     <tr>
         <td>
-            <a href="https://github.com/bsbanotto/holbertonschool-higher_level_programming/tree/master/0x0C-python-almost_a_circle">0x0C-python-almost_a_circle</a>
+            <a href="https://github.com/bsbanotto/holbertonschool-higher_level_programming/tree/master/python-almost_a_circle">python-almost_a_circle</a>
         </td>
         <td>
             This project combines everything learned this trimester in preparation for the AirBnB series of projects
